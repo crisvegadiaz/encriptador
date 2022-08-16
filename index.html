@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="logo-pestaña.svg">
+    <title>Encriptado de texto </title>
+</head>
+
+<body>
+    <main>
+        <section class="logo">
+            <img src="logo.svg" width="31.09" height="48">
+        </section>
+        <section class="entrada">
+            <form>
+                <textarea type="text" maxlength="300" autofocus placeholder="Ingrese texto aquí"></textarea>
+                <button type="button" class="encriptar">Encriptar</button>
+                <button type="button" class="desencriptar">Desencriptar</button>
+            </form>
+        </section>
+        <section class="salida">
+            <div class="targeta">
+                <img src="muñeco.svg">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingrese un texto que desees encriptar o desencriptar</p>
+                <button>Copiar</button>
+            </div>
+        </section>
+    </main>
+    <script src="Encriptador.js"></script>
+</body>
+
+</html>

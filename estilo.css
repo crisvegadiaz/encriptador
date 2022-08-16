@@ -1,0 +1,201 @@
+/* paleta de colores */
+:root {
+    --fondo-color: #f3f5fc;
+    --fondo-gris: #d8dfe8;
+    --color-blaco: #ffffff;
+    --texto-gris: #4E5057;
+    --texto-negro: #000000;
+    --texto-azul: #0A3871;
+}
+
+/* Colunas */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fondo-color);
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    grid-template-rows: 50rem;
+}
+
+/* Logo */
+
+main .logo img {
+    margin: 40px 84px;
+}
+
+
+/* Entrada de datos */
+main .entrada form {
+    margin: 168px 0 0 248px;
+
+
+}
+
+main .entrada textarea {
+    display: block;
+    width: 90%;
+    height: 635px;
+    font-size: 32px;
+    color: var(--texto-azul);
+    background-color: var(--fondo-color);
+    border: none;
+    resize: none;
+}
+
+main .entrada textarea::placeholder {
+    color: var(--texto-azul);
+}
+
+main .entrada button {
+    padding: 24px;
+    width: 328px;
+    height: 67px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400px;
+    text-align: center;
+    margin: 2rem 1rem 0 0;
+}
+
+main .entrada .encriptar {
+    color: var(--color-blaco);
+    background: var(--texto-azul);
+}
+
+main .entrada .desencriptar {
+    color: var(--texto-azul);
+    background: var(--fondo-gris);
+    border: 1px solid var(--texto-azul);
+}
+
+/* Salida de datos */
+
+main .salida .targeta {
+    width: 400px;
+    height: 944px;
+    margin: 40px 40px;
+    background: var(--color-blaco);
+    border-radius: 32px;
+    float: right;
+}
+
+main .salida .targeta img {
+    width: 336px;
+    height: 304px;
+    margin: 243px 32px 0;
+}
+
+main .salida .targeta h2, p, button {
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 16px 0 0 0;
+}
+
+main .salida .targeta h2 {
+    font-size: 24px;
+}
+
+main .salida .targeta p {
+    font-size: 16px;
+    color: var(--texto-gris);
+}
+
+main .salida button, .entrada button:hover {
+    cursor: pointer;
+}
+
+/* boton copy */
+main .salida button {
+    visibility: hidden;
+    position: absolute;
+    right: 75px;
+    top: 54rem;
+    width: 328px;
+    height: 67px;
+    border: 1px solid var(--texto-azul);
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: var(--texto-azul);
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Ajuste a tables */
+@media screen and (max-width: 1200px) {
+    main {
+        grid-template-columns: 100%;
+        grid-template-rows: 20%;
+    }
+
+    /* Entrada de datos */
+    main .entrada form {
+        margin: 0 40px;
+    }
+
+    main .entrada textarea {
+        width: 100%;
+        height: 635px;
+    }
+
+    main .entrada bottom {
+        margin: 2rem 0;
+    }
+
+    main .entrada .desencriptar {
+        float: right;
+    }
+
+    /* Salida de datos */
+    main .salida{
+        grid-template-rows: 10%;
+    }
+    main .salida .targeta {
+        margin: 1rem auto;
+        width: 90%;
+        float: none;
+        height: 133px;
+        background-attachment: scroll;
+    }
+
+    main .salida .targeta img {
+        display: none;
+    }
+
+    main .salida .targeta h2 {
+        padding: 32px 0 0 0;
+    }
+
+    /* boton copy */
+    main .salida button {
+        position: relative;
+        top: -6rem;
+        right: -5%;
+        width: 90%;
+    }
+
+}
+
+/* Ajuste a telefonos */
+@media screen and (max-width: 763px) {
+
+    main .entrada bottom {
+        display: block;
+    }
+
+    main .entrada .encriptar {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    main .entrada .desencriptar {
+        float: none;
+        margin: 1rem 0;
+        width: 100%;
+    }
+}
