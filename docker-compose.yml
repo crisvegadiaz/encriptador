@@ -1,9 +1,0 @@
-version: '3'
-services:
-  web:
-    image: nginx:1.23.1-alpine
-    restart: always
-    ports:
-      - "9090:80"
-    volumes:
-      - /home/cristian/encriptador:/usr/share/nginx/html:ro
